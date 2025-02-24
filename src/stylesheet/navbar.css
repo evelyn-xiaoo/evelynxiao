@@ -1,0 +1,56 @@
+
+.navbar-nav {
+    gap: 3vw;
+    margin-right: 2rem;
+}
+
+.background {
+    position: relative;
+}
+
+.nav-link {
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.active-self {
+    color: #fff3b5;
+}
+
+.navbar-brand {
+    font-family: "PT Seriff";
+    color: white;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.nav-item {
+    align-self: flex-end;
+}
+
+.nav-item a:hover {
+    color: rgb(147, 196, 182);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%288, 8, 8, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    outline: none; /* Remove focus outline */
+    box-shadow: none; /* Remove focus box-shadow */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: none; /* Remove focus box-shadow */
+}

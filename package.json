@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.0.9"
+    "@astrojs/react": "^4.2.0",
+    "astro": "^5.0.9",
+    "bootstrap": "^5.3.3",
+    "react": "^19.0.0"
   }
 }

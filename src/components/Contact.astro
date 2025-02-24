@@ -1,0 +1,99 @@
+---
+import pfp from "../assets/profile-image.png";
+import resume from "../assets/resume.pdf";
+import "bootstrap/dist/css/bootstrap.min.css";
+---
+<div class="container-fluid" id="contact" >
+    <div id=test" class="frame mb-3">
+        <div class="col links box mb-3">
+            <h2 class="row-2">Evelyn Xiao</h2>
+            <a class="row-1" href="https://www.linkedin.com/in/evelynxiao" target="_blank">LinkedIn</a>
+            <a class="row-1" href="https://www.github.com/evelyn-xiaoo" target="_blank">Github</a>
+            <a class="row-1" href="mailto:xiao.ev@northeastern.edu" target="_blank">xiao.ev@northeastern.edu</a>
+        </div>
+        <div class="picture">
+            <img class="pfp" src={pfp.src} fetchpriority="high"/>
+        </div>
+    </div>
+    <div id="pdf-preview" class="mb-3">
+        <iframe 
+          src={resume}
+          width="100%" 
+          height="100%" 
+          style="border: none;"
+        ></iframe>
+      </div>      
+</div>
+
+<style>
+    #contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #test {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-grow: 1;
+        width: 60%;
+    }
+    .box {
+        border: 1px solid white;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        padding-right: 5rem;
+        flex-grow: 1;
+        max-height: fit-content;
+        padding-bottom: 3rem;
+    }
+
+    .links h2 {
+        font-family: "PT Seriff";
+        color: white;
+        font-size: 2em;
+        white-space: nowrap;
+    }
+
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+    }
+
+    .links a:hover {
+        color: #fff3b5;
+    }
+
+    .picture {
+        flex-basis: 45%;
+        min-width: 200px;
+        max-width: 300px;
+        height: 100%;
+    }
+
+    .pfp {
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: -3rem;
+        top: -2rem;
+    }
+
+    .frame {
+        display: flex;
+        flex-wrap: nowrap;
+        height: fit-content;
+        width: 100%;
+    }
+
+    #pdf-preview {
+        width: 100%;
+        height: 80vh;
+    }
+</style>

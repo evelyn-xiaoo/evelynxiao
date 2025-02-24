@@ -1,0 +1,72 @@
+---
+const {currentPage} = Astro.props;
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+---
+
+
+<nav class="navbar navbar-expand-lg background">
+  <div class="container-fluid">
+      {currentPage === '/' ? (
+          <>
+          </>
+      ) : (
+          <>
+              <a class="navbar-brand" href="/">Evelyn Xiao</a>
+          </>
+      )}
+    <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+      >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class={currentPage === '/' ? 'nav-link active-self' : 'nav-link'} href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class={currentPage === '/projects' ? 'nav-link active-self' : 'nav-link'} href="/projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class={currentPage === '/aboutme' ? 'nav-link active-self' : 'nav-link'} href="/aboutme">About Me</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+    .navbar-nav {
+        gap: 3rem;
+        margin-right: 2rem;
+    }
+
+    .background {
+        position: relative;
+    }
+
+    .nav-link {
+        color: white;
+        font-size: 1rem;
+    }
+
+    .active-self {
+        color: #fff3b5;
+    }
+
+    .navbar-brand {
+        font-family: "PT Seriff";
+        color: white;
+        font-size: 1rem;
+        margin-left: 2rem;
+    }
+
+</style>
+

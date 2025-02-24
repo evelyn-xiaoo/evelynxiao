@@ -1,0 +1,206 @@
+---
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import photo1 from "../assets/slideshow/photo1.jpg";
+import photo2 from "../assets/slideshow/photo2.jpg";
+import photo3 from "../assets/slideshow/photo3.jpg";
+import photo4 from "../assets/slideshow/photo4.jpg";
+import photo5 from "../assets/slideshow/photo5.jpg";
+import photo6 from "../assets/slideshow/photo6.jpg";
+import photo7 from "../assets/slideshow/photo7.jpg";
+import photo8 from "../assets/slideshow/photo8.jpg";
+import photo9 from "../assets/slideshow/photo9.jpg";
+import photo10 from "../assets/slideshow/photo10.jpg";
+import photo11 from "../assets/slideshow/photo11.jpg";
+import photo12 from "../assets/slideshow/photo12.jpg";
+import photo13 from "../assets/slideshow/photo13.jpg";
+import photo14 from "../assets/slideshow/photo14.jpg";
+import photo15 from "../assets/slideshow/photo15.jpg";
+import photo16 from "../assets/slideshow/photo16.jpg";
+import photo17 from "../assets/slideshow/photo17.jpg";
+import photo18 from "../assets/slideshow/photo18.jpg";
+import photo19 from "../assets/slideshow/photo19.jpg";
+import photo20 from "../assets/slideshow/photo20.jpg";
+import photo21 from "../assets/slideshow/photo21.jpg";
+import photo22 from "../assets/slideshow/photo22.jpg";
+---
+
+<div class="box container">
+    <div class="info">
+        <p>
+            I am a computer science major at Northeastern University, pursuing a Human-Centered Computing concentration. 
+            I wish to obtain a web-development or mobile app development position for both co-op and my future career 
+            as a developer. In regards to my career, I have interests in creating prototypes for app and website ideas. 
+            I have recently been creating projects in HTML, CSS, and Swift to help me learn these new programming languages. 
+        </p>
+        <p>
+            My interest in computer science began in the 9th grade when I decided to build my own PC instead of opting 
+            for a prebuilt or a laptop. This hands-on project fueled my curiosity and passion for technology. Following 
+            this, I enrolled in a game development course in C++, where I was both the only beginner and the only woman. 
+            This challenging yet rewarding experience further solidified my commitment to pursuing a career in computer science.
+        </p>
+        <p>
+            Outside of school, you can find me hanging out with friends, enjoying alone time at coffee shops with a matcha, 
+            or lifting at the gym! When I am back at home in Philadelphia, I love spending time with my dog Bean or going on 
+            trips with my family for snowboarding or just traveling. Some of my favorite places I have been to are Utah, Japan, 
+            and Korea where I hope to visit again soon. To document these trips and express my creativity, I enjoy creating 
+            small videos to share with friends and family. My goals include leveraging my technical skills to create innovative 
+            solutions and using my creative talents to bring unique perspectives to the projects I work on. 
+        </p>
+        <div>
+            <h3>
+                Photography
+            </h3>
+            <p>
+                Photography has been a passion of mine for many years, allowing me to capture and share the beauty of the world around me. 
+                It started when it became my job to take photos for Mini-THON where I encapsulated moments of joy, compassion, and accomplishment 
+                of everyone involved. My travels have also taken me to stunning locations like Utah and Japan, where I’ve been able to explore and 
+                document the unique landscapes and cultures. Additionally, I’ve enjoyed capturing special moments with friends at events like prom 
+                and graduation, preserving memories that we can all look back on with fondness. 
+            </p>
+        </div>
+        <div class="photos">
+            <div class="slideshow col">
+                <div class="images row-12">
+                    <img src={photo1.src} id="photo1">
+                    <img src={photo2.src} id="photo2">
+                    <img src={photo3.src} id="photo3">
+                    <img src={photo4.src} id="photo4">
+                    <img src={photo5.src} id="photo5">
+                    <img src={photo6.src} id="photo6">
+                    <img src={photo7.src} id="photo7">
+                    <img src={photo8.src} id="photo8">
+                    <img src={photo9.src} id="photo9">
+                    <img src={photo10.src} id="photo10">
+                    <img src={photo11.src} id="photo11">
+                    <img src={photo12.src} id="photo12">
+                    <img src={photo13.src} id="photo13">
+                    <img src={photo14.src} id="photo14">
+                    <img src={photo15.src} id="photo15">
+                    <img src={photo16.src} id="photo16">
+                    <img src={photo17.src} id="photo17">
+                    <img src={photo18.src} id="photo18">
+                    <img src={photo19.src} id="photo19">
+                    <img src={photo20.src} id="photo20">
+                    <img src={photo21.src} id="photo21">
+                    <img src={photo22.src} id="photo22">
+                </div>
+                <div class="slider-nav row-12">
+                    
+                    <a href="#photo1"></a>
+                    <a href="#photo2"></a>
+                    <a href="#photo3"></a>
+                    <a href="#photo4"></a>
+                    <a href="#photo5"></a>
+                    <a href="#photo6"></a>
+                    <a href="#photo7"></a>
+                    <a href="#photo8"></a>
+                    <a href="#photo9"></a>
+                    <a href="#photo10"></a>
+                    <a href="#photo11"></a>
+                    <a href="#photo12"></a>
+                    <a href="#photo13"></a>
+                    <a href="#photo14"></a>
+                    <a href="#photo15"></a>
+                    <a href="#photo16"></a>
+                    <a href="#photo17"></a>
+                    <a href="#photo18"></a>
+                    <a href="#photo19"></a>
+                    <a href="#photo20"></a>
+                    <a href="#photo21"></a>
+                    <a href="#photo22"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    * {
+        color: white;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .box {
+        margin-bottom: 3rem;
+        padding: 3rem;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links h2 {
+        font-family: "PT Seriff";
+        color: white;
+        font-size: 3rem;
+    }
+
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+
+    .photos {
+        position: relative;
+        display: grid;
+        justify-content: center;
+    }
+
+
+
+    .slideshow {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        max-width: 100%;
+    }
+    
+    .images {
+        position: relative;
+        display: flex;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    
+    .images img {
+        position: relative;
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: contain;
+        width: 100%;
+    }
+    
+    .slider-nav {
+        position: relative;
+        display: flex;
+        column-gap: 0.5rem;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1;
+        max-width: 100%;
+        padding: 2px;
+    }
+    
+    .slider-nav a {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: white;
+        opacity: 0.75;
+        transition: opacity ease 250ms;
+    }
+</style>
