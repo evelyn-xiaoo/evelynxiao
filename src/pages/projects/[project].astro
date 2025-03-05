@@ -1,0 +1,24 @@
+---
+// filepath: /Users/evelynxiao/Desktop/projects/Website/evelynxiao/src/pages/projects/[project].astro
+import fs from 'fs';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const projectsDir = path.resolve('./src/components/projects');
+  const projectFiles = fs.readdirSync(projectsDir).filter(file => file.endsWith('.json'));
+
+  const paths = projectFiles.map(file => {
+    const projectData = JSON.parse(fs.readFileSync(path.join(projectsDir, file), 'utf-8'));
+    return { params: { project: projectData.title } };
+  });
+
+  return paths;
+}
+
+const { project } = Astro.params;
+const projectsDir = path.resolve('./src/components/projects');
+const projectFile = path.join(projectsDir, `${project}.json`);
+const projectData = JSON.parse(fs.readFileSync(projectFile, 'utf-8'));
+---
+
+<p>{projectData.title}</p>

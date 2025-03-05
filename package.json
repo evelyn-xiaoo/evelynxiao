@@ -13,5 +13,8 @@
     "astro": "^5.0.9",
     "bootstrap": "^5.3.3",
     "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.8"
   }
 }

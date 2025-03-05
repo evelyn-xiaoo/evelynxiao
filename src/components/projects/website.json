@@ -1,0 +1,11 @@
+{
+    "title": "Personal Website",
+    "description": "A mobile-app game created to showcase the realistic  side of life, that is usually over-shadowed by social media.",
+    "why": "This is my first project working with Swift. I knew I wanted to create something in the mobile-app format as I hope to pursue a career in iOS development. Many of my initial ideas were based on social media as that is what I and a majority of other people use our phones for. We like sharing with friends and family what we are up to and social media has been a game-changing platform to do so, but it has become unrealistic with people showing only the good parts of their lives. Snipe eliminates this by putting the camera in other people’s hands. ",
+    "what": "Snipe is run by you and your friends. There are two game modes: Target and Free-For-All. Target assigns you a person you must take at most 3 photos of while Free-For-All allows you to submit one photo of each person. At the decided voting day of the week, players vote on the best photo. The person that is the subject of the winning photo gets a “death” recorded on the leaderboard while the person who took the photo will get a “kill”. All submitted photos of yourself are available to you in the private section of your profile where you can publicize them if you wish.",
+    "tools": ["Astro", "HTML/CSS", "Javascript", "Bootstrap"],
+    "banner": "src/assets/website/website.png",
+    "images": ["src/assets/snipe/snipe-1.png", "src/assets/snipe/snipe-2.png", "src/assets/snipe/snipe-3.png", "src/assets/snipe/snipe-4.png", "src/assets/snipe/snipe-5.png", "src/assets/snipe/snipe-6.png", "src/assets/snipe/snipe-7.png", "src/assets/snipe/snipe-8.png"],
+    "captions": ["Snipe Home", "Snipe Profile", "Snipe Game", "Snipe Game", "Snipe Game", "Snipe Game", "Snipe Game", "Snipe Game"],
+    "slug": "snipe"
+}
