@@ -4,75 +4,57 @@ import background from '../assets/home-background.png';
 import "bootstrap/dist/css/bootstrap.min.css";
 ---
 
-<div id="container" class="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main class="row container">
-		<section id="hello" class="col-12 col-xl-6">
-			<h2 class="row-6">welcome!</h2>
-			<h2 class="row-6">my name is</h2>
-		</section>
-		<section id="name" class="col-12 col-xl-6">
-			<div id="evelyn">
-				<h1 >EVELYN XIAO</h1>
+<main class="row flex-column flex-xl-row space-between">
+	<section id="hello" class="col-12 col-xl-6 col">
+		<h2 class="row-6">welcome!</h2>
+		<h2 class="row-6">my name is</h2>
+	</section>
+	<section id="name" class="col-12 col-xl-6">
+		<div id="evelyn">
+			<h1 >EVELYN XIAO</h1>
+		</div>
+		<div id="info">
+			<div class="info primary">
+				<h3>northeastern undergraduate</h3>
+				<h3>|</h3>
+				<h3>computer science major</h3>
+				<h3>|</h3>
+				<h3>matcha lover</h3>
+				<h3>|</h3>
+				<h3>gym goer</h3>
+				<h3>|</h3>
+				<h3>dog mom</h3>
+				<h3>|</h3>
+				<h3>film/photography enthusiast</h3>
+				<h3>|</h3>
+				<h3>valorant player</h3>
+				<h3>|</h3>
+				<h3>northeastern undergraduate</h3>
+				<h3>|</h3>
+				<h3>computer science major</h3>
+				<h3>|</h3>
+				<h3>matcha lover</h3>
+				<h3>|</h3>
+				<h3>gym goer</h3>
+				<h3>|</h3>
+				<h3>dog mom</h3>
+				<h3>|</h3>
+				<h3>film/photography enthusiast</h3>
+				<h3>|</h3>
+				<h3>valorant player</h3>
+				<h3>|</h3>
 			</div>
-			<div id="info">
-				<div class="info primary">
-					<h3>northeastern undergraduate</h3>
-					<h3>|</h3>
-					<h3>computer science major</h3>
-					<h3>|</h3>
-					<h3>matcha lover</h3>
-					<h3>|</h3>
-					<h3>gym goer</h3>
-					<h3>|</h3>
-					<h3>dog mom</h3>
-					<h3>|</h3>
-					<h3>film/photography enthusiast</h3>
-					<h3>|</h3>
-					<h3>valorant player</h3>
-					<h3>|</h3>
-					<h3>northeastern undergraduate</h3>
-					<h3>|</h3>
-					<h3>computer science major</h3>
-					<h3>|</h3>
-					<h3>matcha lover</h3>
-					<h3>|</h3>
-					<h3>gym goer</h3>
-					<h3>|</h3>
-					<h3>dog mom</h3>
-					<h3>|</h3>
-					<h3>film/photography enthusiast</h3>
-					<h3>|</h3>
-					<h3>valorant player</h3>
-					<h3>|</h3>
-				</div>
-			</div>
-			
-		</section>
-	</main>
-</div>
+		</div>
+		
+	</section>
+</main>
 
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
-
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-		width: 100%;
-		justify-content: center;
-	}
 
 	main {
-		height: 100%;
+		position: relative;
 		width: 100%;
+		height: 80vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -89,7 +71,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 	#hello h2 {
 		color: white;
 		font-family: 'PT Serif';
-		font-size: 4rem;
+		font-size: 5vw;
 	}
 
 	#name {
@@ -98,15 +80,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 		justify-content: center;
 	}
 
-	#evelyn {
-		display: flex;
-		flex-direction: column;
-		align-items: end;
-	}
-
 	#info {
 		overflow-x: hidden;
-		padding: 10px;
 	}
 
 	.info {
@@ -119,9 +94,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 	#name h1{
 		color: white;
-		font-size: 5rem;
+		font-size: 6vw;
 		font-family: 'PT Seriff';
 		width: fit-content;
+		text-align: end;
+	}
+
+	#evelyn h1 {
+		align-items: end;
+		width: 100%;
+		margin: 0px;
 	}
 
 	.info h3 {

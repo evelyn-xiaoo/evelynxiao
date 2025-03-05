@@ -1,6 +1,7 @@
 ---
 import NavBar from "../components/NavBar.jsx";
 const currentPath = Astro.url.pathname;
+import background from '../assets/home-background.png';
 ---
 
 <!doctype html>
@@ -14,7 +15,10 @@ const currentPath = Astro.url.pathname;
   </head>
   <body>
     <NavBar client:only="react" currentPage={currentPath} />
-    <slot />
+    <div id="container" class="">
+      <img id="background" src={background.src} alt="" fetchpriority="high" />
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -25,5 +29,26 @@ const currentPath = Astro.url.pathname;
     width: 100%;
     height: 100%;
   }
+
+  #background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(100px);
+		overflow: hidden;
+	}
+
+	#container {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		width: 100%;
+    display: flex;
+		justify-content: center;
+		overflow-x: hidden;
+    align-items: center;
+    padding: 2rem;
+	}
 
 </style>

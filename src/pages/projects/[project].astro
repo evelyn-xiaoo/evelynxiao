@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 
   const paths = projectFiles.map(file => {
     const projectData = JSON.parse(fs.readFileSync(path.join(projectsDir, file), 'utf-8'));
-    return { params: { project: projectData.title } };
+    return { params: { project: projectData.slug } };
   });
 
   return paths;
@@ -19,6 +19,36 @@ const { project } = Astro.params;
 const projectsDir = path.resolve('./src/components/projects');
 const projectFile = path.join(projectsDir, `${project}.json`);
 const projectData = JSON.parse(fs.readFileSync(projectFile, 'utf-8'));
+
+import background from "../../assets/home-background.png"
 ---
 
-<p>{projectData.title}</p>
+<div id="container" class="container-fluid">
+    <img id="background" src={background.src}>
+    <main>
+        <p>{projectData.title}</p>
+    </main>
+</div>
+
+<style>
+    #container {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		height: 100%;
+		width: 100%;
+		justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+		overflow-x: hidden;
+	}
+
+    #background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(100px);
+		overflow: hidden;
+	}
+</style>
