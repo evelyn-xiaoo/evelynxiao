@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ProjectsContainer from "../components/ProjectsContainer.astro"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ProjectWindow from "../components/ProjectWindow"
+import ProjectWindow from "../components/ProjectWindow.astro";
+
 const currentPath = Astro.url.pathname;
 ---
 
 <Layout>
-    <ProjectWindow client:only="react" currentPage={currentPath}></ProjectWindow>
+    <!-- Pass currentPath to the ProjectWindow component -->
+    <ProjectWindow currentPage={currentPath} />
 </Layout>

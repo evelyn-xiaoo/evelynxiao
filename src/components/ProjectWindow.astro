@@ -1,0 +1,18 @@
+---
+import ProjectsContainer from '../components/ProjectsContainer.astro';
+import ProjectInfo from "../pages/projects/[project].astro"
+
+
+const { pathname } = Astro.url;
+
+// Extract the project name from the URL
+const pathParts = pathname.split('/').filter(Boolean);
+const isProjectsPage = pathname === '/projects';
+const projectName = pathParts.length > 1 ? pathParts[1] : null;
+---
+
+{isProjectsPage ? (
+    <ProjectsContainer />
+) : (
+    <p>load project info</p>
+)}
