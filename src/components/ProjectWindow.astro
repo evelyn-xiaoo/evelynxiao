@@ -11,8 +11,4 @@ const isProjectsPage = pathname === '/projects';
 const projectName = pathParts.length > 1 ? pathParts[1] : null;
 ---
 
-{isProjectsPage ? (
-    <ProjectsContainer />
-) : (
-    <p>load project info</p>
-)}
+<ProjectsContainer />
