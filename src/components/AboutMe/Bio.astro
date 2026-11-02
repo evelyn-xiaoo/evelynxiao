@@ -1,38 +1,64 @@
 ---
 import astroLogo from '../../public/astro.svg';
 import background from '../../public/home-background.png';
-import Contact from "./Left/Contact.astro";
 import Text from "./Right/AboutMeText.astro";
+import pfp from "../../../public/headshots/EX_2024.jpeg";
+import Photography from './Bottom/Photography.astro';
 import "bootstrap/dist/css/bootstrap.min.css";
 ---
 
-<main class="row flex-column flex-xl-row space-between">
-	<div class="col-12 col-xl-5">
-		<Contact/>
+<main class="container">
+	<div class="row g-2 justify-content-between">
+		<div class="col-12 col-xl-5 picture">
+    		<img class="pfp" src={pfp.src} fetchpriority="high" />
+    	</div>
+
+		<div class="col-12 col-xl-7">
+			<Text />
+		</div>
 	</div>
-	<div class="col-12 col-xl-7">
-		<Text />
+
+	<div class="row">
+    	<div class="col-12">
+			<Photography />
+		</div>
 	</div>
 </main>
 
 <style>
     main {
-		min-height: 100%;
-		min-width: 100%;
 		display: flex;
 		justify-content: center; 
 		align-items: start;
-        padding-top: 2rem;
 		flex-wrap: wrap;
 	}
 
 	.col-12 {
-        flex: 1 1 100%; /* Allow columns to resize dynamically */
-        max-width: 100%; /* Ensure columns do not exceed the screen width */
+        flex: 1 1 100%; 
+        max-width: 100%; 
     }
 
+	.col-12 img {
+
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
     .col-xl-5, .col-xl-7 {
-        flex: 1 1 auto; /* Allow columns to resize dynamically */
-        max-width: 100%; /* Ensure columns do not exceed the screen width */
+        flex: 1 1 auto; 
+        max-width: 100%; 
     }
+
+	.picture {
+        padding: 2rem;
+    }
+
+    .pfp {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-radius: 10%;
+    }
+
 </style>
